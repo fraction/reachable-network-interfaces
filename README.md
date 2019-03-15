@@ -27,7 +27,8 @@ const services = {
 reachableNetworkInterfaces(services, (err, val) => {
   if (err) throw err
 
-  console.log(val) /* => {
+  console.log(val) /* =>
+  {
     http: [],
     foobar: {
       address: '127.0.0.1',
@@ -38,6 +39,7 @@ reachableNetworkInterfaces(services, (err, val) => {
       cidr: '127.0.0.1/8'
     }
   }
+  */
 })
 ```
 
