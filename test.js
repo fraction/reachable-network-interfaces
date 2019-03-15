@@ -16,9 +16,9 @@ test('sanity check', function (t) {
 
     t.deepEqual(results.http, [], 'http should be empty')
 
-    Object.values(results).forEach(interfaces => {
+    Object.values(results).forEach(networkInterfaces => {
       // two tests per interface
-      plannedTests += interfaces.length * 2
+      plannedTests += networkInterfaces.length * 2
     })
 
     t.plan(plannedTests)

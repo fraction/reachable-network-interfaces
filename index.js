@@ -95,7 +95,6 @@ module.exports = (services, cb) => {
           port
         }
 
-
         // Create a simple server that saves an interface in `reachable` after
         // a successfull connection. Note that it calls `done()` regardless of
         // whether the connection works or fails.
@@ -127,4 +126,3 @@ module.exports = (services, cb) => {
     })
   })
 }
-
