@@ -1,0 +1,14 @@
+{
+  "name": "reachable-network-interfaces",
+  "version": "1.0.0",
+  "description": "find reachable network interfaces for services that bind to ports",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tape": "^4.10.1"
+  }
+}
