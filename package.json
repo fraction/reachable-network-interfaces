@@ -10,5 +10,14 @@
   "license": "ISC",
   "devDependencies": {
     "tape": "^4.10.1"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fraction/reachable-network-interfaces.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fraction/reachable-network-interfaces/issues"
+  },
+  "homepage": "https://github.com/fraction/reachable-network-interfaces#readme"
 }
