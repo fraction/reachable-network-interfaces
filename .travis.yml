@@ -1,4 +1,10 @@
 language: node_js
+
 node_js:
-  - "node"
-  - "lts/*"
+  - lts/*
+  - node
+
+os:
+  - linux
+  - osx
+  - windows
