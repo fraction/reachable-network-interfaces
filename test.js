@@ -1,20 +1,22 @@
-const test = require('tape');
+const test = require('tape')
 const rni = require('./')
 
 test('sanity check', function (t) {
   let plannedTests = 1
 
-  t.plan(plannedTests);
-
-  const fixtureServices = {
+  const services = {
     http: 80,
     altHttp: 8000
   }
 
-  rni(fixtureServices, (err, results) => {
+  rni(services, (err, results) => {
     if (err) throw err
 
-    t.deepEqual(results.http, [], 'http should be empty')
+    t.deepEqual(
+      Object.keys(services),
+      Object.keys(results),
+      'result names should match service names'
+    )
 
     Object.values(results).forEach(networkInterfaces => {
       // two tests per interface
@@ -23,14 +25,13 @@ test('sanity check', function (t) {
 
     t.plan(plannedTests)
 
-    results.altHttp.forEach(interface => {
-      t.equal(typeof interface.address === 'string', true)
-      t.equal(typeof interface.internal === 'boolean', true)
-    })
+    Object.values(results).forEach(networkInterfaces =>
+      networkInterfaces.forEach(networkInterface => {
+        t.equal(typeof networkInterface.address, 'string')
+        t.equal(typeof networkInterface.internal, 'boolean')
+      })
+    )
 
     t.end()
   })
-});
-
-
-
+})
